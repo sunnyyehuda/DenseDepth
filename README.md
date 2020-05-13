@@ -29,9 +29,16 @@ pip install -r pip_requirements.txt
 
 *In order to utilize the GPU implementation make sure your hardware and operation system are compatible for Pytorch with python 3*
 
-### Data Collection
+### NYU database
+Download the preprocessed NYU Depth V2 dataset in HDF5 format and place it under a data folder outside the repo directory. The NYU dataset requires 32G of storage space.
 
-Run the shell script ```DataCollect.sh```
+```
+mkdir data; cd data
+
+wget http://datasets.lids.mit.edu/fastdepth/data/nyudepthv2.tar.gz
+
+tar -xvf nyudepthv2.tar.gz && rm -f nyudepthv2.tar.gz
+```
 
 ## Training the model
 
